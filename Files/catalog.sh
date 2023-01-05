@@ -12,3 +12,6 @@ cp /home/centos/shellscript/Files/catalog.service /etc/systemd/system/catalogue.
 systemctl daemon-reload
 systemctl enable catalogue 
 systemctl start catalogue
+cp /home/centos/shellscript/Files/mangodb.repo /etc/yum.repos.d/mongo.repo
+yum install mongodb-org-shell -y
+mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js

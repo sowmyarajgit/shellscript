@@ -1,6 +1,6 @@
 LOG=/tmp/roboshop.log
 echo -e "\e[33m Installing Nginx \e[0m"
-yum install nginx -y &>>${Log}
+yum install nginx -y &>>${LOG}
 echo -e "\e[33m Enable nginx \e[0m" 
 systemctl enable nginx &>>${LOG}
 echo -e "\e[33m Start nginx \e[0m" 

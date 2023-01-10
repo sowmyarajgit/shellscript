@@ -67,5 +67,4 @@ yum install mongodb-org-shell -y &>> ${LOG}
 status_check
 print_head "load schema"
 mongo --host mongodb-dev.sowmyaraj.co.in  </app/schema/$component.js &>> ${LOG}
-status_check
-}
+status_check}

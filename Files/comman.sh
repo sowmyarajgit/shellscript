@@ -1,5 +1,6 @@
 LOG=/tmp/roboshop.log
 script_location=$(pwd)
+
 status_check() {
     if [ $? -eq 0 ]; then
     echo -e "\e[33mSUCESS\e[0m" 
@@ -8,6 +9,7 @@ status_check() {
     echo "Refer log file for more information, log - ${LOG}"
     exit
 }
+
 
 print_head() {
 

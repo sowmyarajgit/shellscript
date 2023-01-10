@@ -58,6 +58,7 @@ status_check
 print_head "start $component" 
 systemctl start $component &>> ${LOG}
 status_check
+if [ ${schema_load} == "true"]; then
 print_head "copying mongodb files into its repo "
 cp /home/centos/shellscript/Files/mangodb.repo /etc/yum.repos.d/mongo.repo  &>> ${LOG}
 status_check

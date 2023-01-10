@@ -1,4 +1,4 @@
-LOG=/tmp/roboshop.log
+source comman.sh
 print_head "Installing Nginx"
 yum install nginx -y &>>${LOG}
 status_check

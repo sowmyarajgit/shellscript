@@ -15,7 +15,9 @@ mkdir /app &>> ${LOG}
 print_head "download user app content"
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip  &>> ${LOG}
 status_check
+
 print_head "unzipping the user app in app location"
+rm -rf /app/*
 cd /app &>> ${LOG}
 unzip /tmp/user.zip &>> ${LOG}
 status_check

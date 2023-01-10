@@ -26,7 +26,7 @@ cd /app &>> ${LOG}
 npm install &>> ${LOG}
 status_check
 print_head "copy user.service files "
-cp $script_location/shellscript/Files/user.service /etc/systemd/system/user.service &>> ${LOG}
+cp /home/centos/shellscript/Files/user.service /etc/systemd/system/user.service &>> ${LOG}
 status_check
 print_head "reload system"
 systemctl daemon-reload &>> ${LOG} 

@@ -68,5 +68,6 @@ status_check
 print_head "load schema"
 mongo --host mongodb-dev.sowmyaraj.co.in  </app/schema/$component.js &>> ${LOG}
 status_check
+fi
 }
 

@@ -18,7 +18,7 @@ print_head() {
 }
 
 nodejs() {
-    source comman.sh
+
 print_head "configure nodejs setup"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>> ${LOG}
 status_check
@@ -58,7 +58,7 @@ status_check
 print_head "start $component" 
 systemctl start $component &>> ${LOG}
 status_check
-if [ ${schema_load} == "true"]; then
+if [ ${schema_load} == "true" ]; then
 print_head "copying mongodb files into its repo "
 cp /home/centos/shellscript/Files/mangodb.repo /etc/yum.repos.d/mongo.repo  &>> ${LOG}
 status_check

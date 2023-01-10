@@ -33,7 +33,7 @@ fi
 status_check
 mkdir /app &>> ${LOG}
 print_head "download $component app content"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip  &>> ${LOG}
+curl -L -o /tmp/$component.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip  &>> ${LOG}
 status_check
 print_head "cleaning app location"
 rm -rf /app/*

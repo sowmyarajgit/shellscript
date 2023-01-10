@@ -44,5 +44,5 @@ print_head "install mangodb"
 yum install mongodb-org-shell -y &>> ${LOG}
 status_check
 print_head "load schema"
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/user.js &>> ${LOG}
+mongo --host mongodb-dev.sowmyaraj.co.in  </app/schema/user.js &>> ${LOG}
 status_check

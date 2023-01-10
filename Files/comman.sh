@@ -8,6 +8,7 @@ status_check() {
     echo -e "\e[31mFaliure\e[0m"
     echo "Refer log file for more information, log - ${LOG}"
     exit
+   fi 
 }
 
 

@@ -1,4 +1,4 @@
-source common.sh
+source comman.sh
 
 component=user
 #schema_load=true

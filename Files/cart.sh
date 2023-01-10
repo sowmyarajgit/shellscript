@@ -1,4 +1,4 @@
-source common.sh
+source comman.sh
 
 component=cart
 schema_load=false

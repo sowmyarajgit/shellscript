@@ -1,11 +1,16 @@
-log=/tmp/mongo.log
-echo -e "\e[33m copying mongodb.repo file to /etc/yum.repos.d/mongo.repo  \e[0m"
-cp /home/centos/shellscript/Files/mangodb.repo /etc/yum.repos.d/mongo.repo &>>${log}
-echo -e "\e[33m Install mangodb \e[0m"
-yum install mongodb-org -y &>>${log}
-echo -e "\e[33m replace 127.0.0.1 to 0.0.0.0 \e[0m"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>${log}
-echo -e "\e[33m Enable mongodb \e[0m"
-systemctl enable mongod &>>${log}
-echo -e "\e[33m start mangodb \e[0m"
-systemctl start mongod &>>${log}
+source comman.sh
+print_head "copying mongodb.repo file to /etc/yum.repos.d/mongo.repo"
+cp /home/centos/shellscript/Files/mangodb.repo /etc/yum.repos.d/mongo.repo &>>${LOG}
+status_check
+print_head "Install mangodb"
+yum install mongodb-org -y &>>${LOG}
+status_check
+print_head "replace listen address 127.0.0.1 to 0.0.0.0"
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>${LOG}
+status_check
+print_head "Enable mongodb"
+systemctl enable mongod &>>${LOG}
+status_check
+print_head "start mangodb"
+systemctl start mongod &>>${LOG}
+status_check

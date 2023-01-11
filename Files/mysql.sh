@@ -17,7 +17,7 @@ print_head "enable mysql"
 systemctl enable mysqld &>> ${LOG}
 status_check
 print_head "start mysql"
-systemctl start mysqld  &>> ${LOG} 
+systemctl restart mysqld  &>> ${LOG} 
 status_check
 print_head "mysql password setting"
 mysql_secure_installation --set-root-pass ${root_mysql_password} &>> ${LOG}

@@ -7,7 +7,7 @@ print_head "disable default version of mysql"
 dnf module disable mysql -y &>> ${LOG}
 status_check
 print_head "copy mysql.repo file"
-cp ${script_location}/Files/mysql.repo /etc/yum.repos.d/mysql.repo &>> ${LOG}
+cp ${script_location}/mysql.repo /etc/yum.repos.d/mysql.repo &>> ${LOG}
 status_check
 print_head "install mysqlserver"
 yum install mysql-community-server -y &>> ${LOG}

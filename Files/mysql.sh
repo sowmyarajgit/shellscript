@@ -11,7 +11,7 @@ dnf module disable mysql -y &>>${LOG}
 status_check
 
 print_head "Copy MySQL Repo file"
-cp ${script_location}/mysql.repo /etc/yum.repos.d/mysql.repo &>>${LOG}
+cp /home/centos/shellscript/Files/mysql.repo /etc/yum.repos.d/mysql.repo &>>${LOG}
 status_check
 
 print_head "Install MySQL Server"

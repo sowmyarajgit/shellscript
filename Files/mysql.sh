@@ -3,6 +3,7 @@ if [ -z "${root_mysql_password}" ]; then
 echo "variable root_mysql_password is missing"
 exit
 fi
+pwd
 print_head "disable default version of mysql" 
 dnf module disable mysql -y &>> ${LOG}
 status_check
